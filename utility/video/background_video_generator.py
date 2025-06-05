@@ -35,7 +35,7 @@ def getBestVideo(query_string, orientation_landscape=True, used_vids=[]):
         filtered_videos = [video for video in videos if video['width'] >= 1080 and video['height'] >= 1920 and video['height']/video['width'] == 16/9]
 
     # Sort the filtered videos by duration in ascending order
-    sorted_videos = sorted(filtered_videos, key=lambda x: abs(35-int(x['duration'])))
+    sorted_videos = sorted(filtered_videos, key=lambda x: abs(15-int(x['duration'])))
 
     # Extract the top 3 videos' URLs
     for video in sorted_videos:
