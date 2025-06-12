@@ -21,6 +21,7 @@ if __name__ == "__main__":
     SAMPLE_FILE_NAME = "audio_tts.wav"
     VIDEO_SERVER = "pexel"
 
+    print("aaa"+SAMPLE_TOPIC)
     response = generate_script(SAMPLE_TOPIC)
     print("ddddd:"+response)
     print("script: {}".format(response))
