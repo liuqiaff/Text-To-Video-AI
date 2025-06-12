@@ -24,7 +24,8 @@ if __name__ == "__main__":
     response = generate_script(SAMPLE_TOPIC)
     print("script: {}".format(response))
 
-    asyncio.run(generate_audio(response, SAMPLE_FILE_NAME))
+    response1 = "活着就是为了活着本身而活着，而不是为了活着之外的任何事物所活着"
+    asyncio.run(generate_audio(response1, SAMPLE_FILE_NAME))
 
     timed_captions = generate_timed_captions(SAMPLE_FILE_NAME)
     print(timed_captions)
