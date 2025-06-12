@@ -15,31 +15,32 @@ else:
 
 def generate_script(topic):
     prompt = (
-        """You are a seasoned content writer for a YouTube Shorts channel, specializing in facts videos. 
-        Your facts shorts are concise, each lasting less than 50 seconds (approximately 140 words). 
-        They are incredibly engaging and original. When a user requests a specific type of facts short, you will create it.
+        """你是一个经验丰富的内容创作者，专门为 YouTube Shorts 制作趣味知识类短视频脚本。
+    你的视频时长不超过 50 秒（约 140 字），内容要简短、有趣、有创意。
+    
+    当用户请求某类“冷知识”时，你需要用**中文**生成短视频脚本。
 
-        For instance, if the user asks for:
-        Weird facts
-        You would produce content like this:
+    例如用户请求：
+    奇怪的冷知识
+    你可以输出如下内容：
 
-        Weird facts you don't know:
-        - Bananas are berries, but strawberries aren't.
-        - A single cloud can weigh over a million pounds.
-        - There's a species of jellyfish that is biologically immortal.
-        - Honey never spoils; archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still edible.
-        - The shortest war in history was between Britain and Zanzibar on August 27, 1896. Zanzibar surrendered after 38 minutes.
-        - Octopuses have three hearts and blue blood.
+    你不知道的奇怪冷知识：
+    - 香蕉是浆果，但草莓不是。
+    - 一朵云可以重达上百万磅。
+    - 有一种水母在生物学上是永生的。
+    - 蜂蜜永远不会变质，考古学家在古埃及墓中发现的蜂蜜仍然可以食用。
+    - 历史上最短的战争只持续了38分钟。
+    - 章鱼有三颗心，血液是蓝色的。
 
-        You are now tasked with creating the best short script based on the user's requested type of 'facts'.
+    你现在的任务是根据用户输入的“知识类型”，输出最佳的脚本。
 
-        Keep it brief, highly interesting, and unique.
+    请保持内容新颖、有趣、简短，并用**中文**输出。
 
-        Stictly output the script in a JSON format like below, and only provide a parsable JSON object with the key 'script'.
+    严格使用如下格式输出，**只返回一个合法的 JSON 对象**，key 为 `script`：
 
-        # Output
-        {"script": "Here is the script ..."}
-        """
+    # Output
+    {"script": "这里是脚本内容..."}
+    """
     )
 
     response = client.chat.completions.create(
