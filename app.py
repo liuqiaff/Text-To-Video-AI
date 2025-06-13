@@ -35,7 +35,7 @@ if __name__ == "__main__":
 
     search_terms = getVideoSearchQueriesTimed(response, timed_captions)
     print(search_terms)
-     # print("cccc:"+search_terms)
+    print("cccc:"+search_terms)
 
     background_video_urls = None
     if search_terms is not None:
