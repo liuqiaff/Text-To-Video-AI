@@ -51,6 +51,7 @@ def generate_script(topic):
             ]
         )
     content = response.choices[0].message.content
+    print("zzz"+content)
     try:
         script = json.loads(content)["script"]
     except Exception as e:
